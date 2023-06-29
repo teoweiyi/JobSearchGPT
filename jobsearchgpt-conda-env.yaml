@@ -9,6 +9,7 @@ dependencies:
     - python-json-logger==2.0.4
     - fastapi==0.95.1
     - uvicorn==0.22.0
+    - gunicorn==20.1.0
     - openai==0.27.6
     - beautifulsoup4==4.12.2
     - validators==0.20.0
