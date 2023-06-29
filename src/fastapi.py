@@ -17,7 +17,7 @@ setup_logging()
 
 app = FastAPI()
 
-# For front end, to be built later
+# TODO: For front end, to be built later
 # templates = Jinja2Templates(directory="templates")
 # @app.get("/index/", response_class = HTMLResponse)
 # def index(request: Request):
@@ -36,6 +36,13 @@ def generate_cover_letter(
 ):
     """
     Retrieve cover letter generated with job description only or job description and work experience.
+
+    Args:
+        url (str): URL that leads to the linkedin listing to be scraped
+        experience (str, optional): User's work experience. Defaults to None.
+
+    Returns:
+        Dict: a dictionary with the results key, which contains the generated cover letter.
     """
     valid_url = validators.url(url)
     if not valid_url:
